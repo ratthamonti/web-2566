@@ -1,0 +1,61 @@
+#view2 .col {
+    padding: 2px;
+}
+
+#view2 .col img {
+    width: 100%;
+
+}
+@font-face {
+    font-family: Minecraft;
+    src: url(1_Minecraft-Regular.otf);
+}
+*{
+    font-family: Minecraft;
+}
+.btn-minecraft{
+    background: #727272;
+    color: rgb(247, 247, 247);
+    width: 25%;
+    padding: .5rem 0;
+    margin-bottom: .75rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    font-size: 1.25rem;
+    letter-spacing: .025rem;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: inset 3px 3px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 0 rgba(0, 0, 0, 0.5);
+}
+.btn-minecraft:hover{
+    background: rgba(115, 107, 221, 1);
+}
+
+.text-minecraft{
+    background: #727272;
+    color: rgb(247, 247, 247);
+    width: 100%;
+    padding: .5rem 0;
+    margin-bottom: .75rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    font-size: 1.25rem;
+    letter-spacing: .025rem;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: inset 3px 3px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 0 rgba(0, 0, 0, 0.5);
+}
+pre {
+    white-space: pre-wrap;
+    font-family: 'Minecraft'
+}
+
+body {
+    background-image: url('src/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.box {
+    padding-top: 10%;
+}

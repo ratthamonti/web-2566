@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Work 1 : JQuery + Boostrap </title>
+</head>
+
+<body>
+
+    <!--<h1 class="alert alert-primary text-center "> งานที่ 1 : เกมจับคู่ภาพ โดยใช้ JQuery และ Boostrap </h1>-->
+
+<div class="box">
+    <div id='view1' class='text-center p-5'>
+        <button type="button" id='playBtn' class="btn-minecraft">PLAY</button>
+        <br>
+        <button type="button" id='howBtn' class="btn-minecraft">How</button>
+        <br>
+        <button type="button" id='homeBtn' class="btn-minecraft" href="">Home</button>
+    </div>
+
+    <div id='view2' class='container text-center p-5'>
+        <div class="row">
+            <div class="col"><img src='src/0.png' id='img1'></div>
+            <div class="col"><img src='src/0.png' id='img2'></div>
+            <div class="col"><img src='src/0.png' id='img3'></div>
+            <div class="col"><img src='src/0.png' id='img4'></div>
+            <div class="col"><img src='src/0.png' id='img5'></div>
+            <div class="col"><img src='src/0.png' id='img6'></div>
+            <div class="col"><img src='src/0.png' id='img7'></div>
+            <div class="col"><img src='src/0.png' id='img8'></div>
+            <div class="col"><img src='src/0.png' id='img9'></div>
+        </div>
+
+        <div class="row">
+            <div class="col"><img src='src/0.png' id='img10'></div>
+            <div class="col"><img src='src/0.png' id='img11'></div>
+            <div class="col"><img src='src/0.png' id='img12'></div>
+            <div class="col"><img src='src/0.png' id='img13'></div>
+            <div class="col"><img src='src/0.png' id='img14'></div>
+            <div class="col"><img src='src/0.png' id='img15'></div>
+            <div class="col"><img src='src/0.png' id='img16'></div>
+            <div class="col"><img src='src/0.png' id='img17'></div>
+            <div class="col"><img src='src/0.png' id='img18'></div>
+        </div>
+
+        <div class="row">
+            <div class="col"><img src='src/0.png' id='img19'></div>
+            <div class="col"><img src='src/0.png' id='img20'></div>
+            <div class="col"><img src='src/0.png' id='img21'></div>
+            <div class="col"><img src='src/0.png' id='img22'></div>
+            <div class="col"><img src='src/0.png' id='img23'></div>
+            <div class="col"><img src='src/0.png' id='img24'></div>
+            <div class="col"><img src='src/0.png' id='img25'></div>
+            <div class="col"><img src='src/0.png' id='img26'></div>
+            <div class="col"><img src='src/0.png' id='img27'></div>
+        </div>
+
+        <div class="row">
+            <div class="col"><img src='src/0.png' id='img28'></div>
+            <div class="col"><img src='src/0.png' id='img29'></div>
+            <div class="col"><img src='src/0.png' id='img30'></div>
+            <div class="col"><img src='src/0.png' id='img31'></div>
+            <div class="col"><img src='src/0.png' id='img32'></div>
+            <div class="col"><img src='src/0.png' id='img33'></div>
+            <div class="col"><img src='src/0.png' id='img34'></div>
+            <div class="col"><img src='src/0.png' id='img35'></div>
+            <div class="col"><img src='src/0.png' id='img36'></div>
+
+        </div>
+        <button type="button" id='stopBtn' class="btn-minecraft">Exit</button>
+    </div>
+    <div id='view3' class='text-center p-5'>
+        <h1 class="btn-minecraft"> Congratulations, you won the game!!! </h1>
+        <button type="button" id='okBtn' class="btn-minecraft">Go Home</button>
+    </div>
+
+    <div id='view4' class='text-center p-5'>
+        <h1 class="text-minecraft"> How to play the picture matching game!!! </h1>
+        <pre class="text-minecraft">
+                1.Pairing: If the two pictures match, they are considered a match and will be removed from the game.
+                
+                2.Mismatch: If the two images do not match, both images will be closed and left as before.
+                
+                3.Winning the game: When all pairs of pictures are matched and removed from the game. The player wins the game.
+                
+                4.Exiting the game: Players can click on the "Exit" button to exit the game and return to the main page.
+        </pre>
+        <button type="button" id='backBtn' class="btn-minecraft">back</button>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+crossorigin="anonymous">
+</script>
+
+<script>
+
+    $(function () {
+        $("#view2").hide();
+        $("#view3").hide();
+        $("#view4").hide();
+        $("#playBtn").click(startGame);
+        $("#howBtn").click(howtoplayGame);
+        $("#backBtn").click(goHome);
+        $("#stopBtn").click(stopGame);
+        $("#okBtn").click(goHome);
+    });
+
+    function startGame() {
+        shuffle();
+        open_count = 0;
+        all_card = 36;
+        $("#view2").show();
+        $("#view1").hide();
+
+        // Show all images at the beginning
+        setTimeout(() => {
+            $("#view2 img").each(function () {
+                var s = $(this).attr("srcx");
+                $(this).attr("src", s).attr("state", 1);
+            });
+
+            // After 2 seconds, hide all images
+            setTimeout(() => {
+                $("#view2 img").attr("src", "src/0.png").attr("state", 0);
+            }, 1000);
+        },);
+    }
+
+
+    function stopGame() {
+        $("#view2").hide();
+        $("#view1").show();
+        location.reload();
+    }
+
+    function goHome() {
+        $("#view3").hide();
+        $("#view4").hide();
+        $("#view1").show();
+    }
+
+    function howtoplayGame() {
+        $("#view4").show();
+        $("#view1").hide();
+    }
+
+    function shuffle() {
+        var list = [];
+        list[0] = 0;
+        for (var i = 1; i <= 18; i++) {
+            list.push(i);
+            list.push(i);
+        }
+        for (var i = 1; i < 100; i++) {
+            var a = 1 + Math.round(Math.random() * 35);
+            var b = 1 + Math.round(Math.random() * 35);
+            var t = list[a];
+            list[a] = list[b];
+            list[b] = t;
+        }
+        $("#view2 img").attr("src", "src/0.png")
+            .attr("state", 0);
+        for (var i = 1; i <= 36; i++) {
+            $("#img" + i).attr("srcx", "src/" + list[i] + ".png");
+        }
+    }
+
+    $(function () {
+        $("#stopBtn").click(stopGame);
+        $("#view2 img").click(imgClick);
+    });
+
+    function imgClick() {
+        if ($(this).attr("state") != 0) return;
+        if (open_count >= 2) return;
+
+        open_count++;
+        var s = $(this).attr("srcx");
+        if (open_count == 1) open_card1 = s;
+        if (open_count == 2) open_card2 = s;
+        $(this).hide().attr("src", s).slideDown(500);
+        $(this).attr("state", 1);
+
+        if (open_count == 2) {
+            setTimeout(() => {
+                if (open_card1 == open_card2) {
+                    all_card -= 2;
+                    $("[state=1]").fadeOut(1000).attr("state", 2);
+
+                    // Check if all cards are matched
+                    if (all_card === 0) {
+                        $("#view2").hide();
+                        $("#view3").show();
+                    }
+                } else {
+                    $("[state=1]").attr("state", 0).attr("src", "src/0.png");
+                }
+                open_count = 0;
+                open_card2 = "";
+                open_card1 = "";
+            }, 2000)
+        }
+    }
+</script>
