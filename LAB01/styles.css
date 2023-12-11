@@ -28,6 +28,7 @@
 }
 .btn-minecraft:hover{
     background: rgba(115, 107, 221, 1);
+    color: yellow; /* สีเหลือง */
 }
 
 .text-minecraft{
