@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+      </head>
+  <body>
+    <a-scene>
+    <!-- A -->
+      <a-text   value="Ratthamonti Wasan
+                    643021336-0"
+                position="0 -5 -2.2" 
+                animation="property: position; 
+                        to: 0 2.7 -2.2; 
+                        dur: 2000; 
+                        easing: linear; 
+                        loop: false" ></a-text>
+    <!-- A -->
+
+    <a-box position="-1 1.00115 -3" rotation="-90 45 0" src="src/grass_top.jpg" material="" geometry="primitive: plane"></a-box>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" src="src/grass_side.png"></a-box>
+    
+    <!-- head -->
+    <a-entity id="head" position="0.698 2.22443 -2.91" rotation="0 45 0">
+      
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="0 0 0.22919" rotation="" width="0.48517" height="0.4613" material="src: src/head_l.png" id="head-left" geometry="width: 0.485; height: 0.461"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0 0 -0.23065" rotation="0 180 0" width="0.48517" height="0.4613" material="src: src/head_r.png" id="head-right" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.24228 0 0" rotation="0 -90 0" width="0.4613" height="0.51485" material="src: src/head_f.png" id="head-front" geometry="width: 0.461; height: 0.515" scale="1 0.89885 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.24228 0 0" rotation="0 90 0" width="0.4613" height="0.51485" material="src: src/head_b.png" id="head-back" geometry="width: 0.461; height: 0.515" scale="1 0.89438 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.23065 0" rotation="-90 0 0" width="0.48517" height="0.4613" material="src: src/head_t.png" id="head-top" geometry="width: 0.485; height: 0.461"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.23065 0" rotation="90 0 0" width="0.48517" height="0.4613" material="src: src/head_u.png" id="head-bottom" geometry="width: 0.485; height: 0.461"></a-plane>
+      </a-entity>
+      
+    <!-- body -->
+    <a-entity id="body" position="0.71429 1.49712 -2.927" rotation="0 45 0">
+
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="-0.00125 0 0.23369" rotation="" width="0.28226" height="0.47086" material="src: src/body_l.png" id="body-lelt" geometry="width: 0.282; height: 0.471" scale="1 2.1194 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0.00025 -0.00279 -0.23484" rotation="0 180 0" width="0.28226" height="0.47086" material="src: src/body_r.png" id="body-right" geometry="width: 0.282; height: 0.471" scale="1 2.11446 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.14113 0 0" rotation="0 -90 0" width="0.47086" height="1" material="src: src/body_f.png" id="body-front" geometry="width: 0.471"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.14113 0 0" rotation="0 90 0" width="0.47086" height="1" material="src: src/body_b.png" id="body-back" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.49972 0" rotation="-90 0 0" width="0.28226" height="0.47086" material="src: src/body_t.png" id="body-top" geometry="width: 0.282; height: 0.471"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.49862 0" rotation="90 0 0" width="0.28226" height="0.47086" material="src: src/body_u.png" id="body-bottom" geometry=""></a-plane>
+      </a-entity>
+    
+    <!-- arm left -->
+    <a-entity id="arm_l" position="1.1201 1.54141 -2.84173" rotation="0 45.00010522957486 38.16872943823005">
+
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="0 0 0.111" rotation="" width="0.22156" height="0.222" material="src: src/arm_l.png" id="arm_left-left" geometry="width: 0.222" scale="1 4.46372 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0 0 -0.111" rotation="0 180 0" width="0.22156" height="0.222" material="src: src/arm_r.png" id="arm_left-right" geometry="width: 0.222" scale="1 4.49329 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.11078 0 0" rotation="0 -90 0" width="0.222" height="1" material="src: src/arm_f.png" id="arm_left-front" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.11078 0 0" rotation="0 90 0" width="0.222" height="1" material="src: src/arm_b.png" id="arm_left-back" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.49436 0" rotation="-90 0 0" width="0.22156" height="0.222" material="src: src/arm_t.png" id="arm_left-top" geometry="width: 0.222"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.49473 0" rotation="90 0 0" width="0.22156" height="0.222" material="src: src/arm_b.png" id="arm_left-bottom" geometry="width: 0.222"></a-plane>
+      </a-entity>
+
+    <!-- arm right -->
+    <a-entity id="arm_r" position="0.31303 1.51532 -3.0187" rotation="0 45.00010522957486 -30.006945646591472">
+
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="0 0 0.111" rotation="" width="0.22156" height="0.222" material="src: src/arm_l.png" id="arm_right-left" geometry="width: 0.222" scale="1 4.50125 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0 0 -0.111" rotation="0 180 0" width="0.22156" height="0.222" material="src: src/arm_r.png" id="arm_right-right" geometry="" scale="1 4.50204 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.11078 0 0" rotation="0 -90 0" width="0.222" height="1" material="src: src/arm_f.png" id="arm_right-front" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.11078 0 0" rotation="0 90 0" width="0.222" height="1" material="src: src/arm_b.png" id="arm_right-back" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.49915 0" rotation="-90 0 0" width="0.22156" height="0.222" material="src: src/arm_t.png" id="arm_r-top" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.49828 0" rotation="90 0 0" width="0.22156" height="0.222" material="src: src/arm_u.png" id="arm_r-bottom" geometry="width: 0.222"></a-plane>
+      </a-entity>
+    
+      <!-- leg left -->
+      <a-entity id="leg_l" position="0.6314 0.63102 -2.67085" rotation="0 45.00010522957486 -31.277193078396508">
+
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="0 0 0.111" rotation="" width="0.22156" height="0.222" material="src: src/leg_l.png" id="leg_left-left" geometry="width: 0.222" scale="1 4.51472 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0 0 -0.111" rotation="0 180 0" width="0.22156" height="0.222" material="src: src/leg_r.png" id="leg_left-right" geometry="width: 0.222" scale="1 4.50288 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.11078 0 0" rotation="0 -90 0" width="0.222" height="1" material="src: src/leg_f.png" id="leg_left-front" geometry="" visible=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.11078 0 0" rotation="0 90 0" width="0.222" height="1" material="src: src/leg_b.png" id="leg_left-back" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.50055 0" rotation="-90 0 0" width="0.22156" height="0.222" material="src: src/leg_t.png" id="leg_left-top" geometry="width: 0.222"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.50158 0" rotation="90 0 0" width="0.22156" height="0.222" material="src: src/leg_u.png" id="leg_left-bottom" geometry="width: 0.222"></a-plane>
+      </a-entity>
+
+    <!-- leg right -->
+    <a-entity id="leg_r" position="0.78978 0.66293 -3.17678" rotation="0 45 32.661">
+
+        <!-- สร้าง entity สำหรับหน้าด้านของกล่อง -->
+        <a-plane position="0 0 0.111" rotation="" width="0.22156" height="0.222" material="src: src/leg_l.png" id="leg_right-left" geometry="width: 0.222" scale="1 4.5119 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านหลังของกล่อง -->
+        <a-plane position="0 0 -0.111" rotation="0 180 0" width="0.22156" height="0.222" material="src: src/leg_r.png" id="leg_right-right" geometry="width: 0.222" scale="1 4.4632 1"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างซ้าย -->
+        <a-plane position="-0.11078 0 0" rotation="0 -90 0" width="0.222" height="1" material="src: src/leg_f.png" id="leg_right-front" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านข้างขวา -->
+        <a-plane position="0.11078 0 0" rotation="0 90 0" width="0.222" height="1" material="src: src/leg_b.png" id="leg_right-back" geometry=""></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านบน -->
+        <a-plane position="0 0.49563 0" rotation="-90 0 0" width="0.22156" height="0.222" material="src: src/leg_t.png" id="leg_right-top" geometry="width: 0.222"></a-plane>
+    
+        <!-- สร้าง entity สำหรับด้านด้านล่าง -->
+        <a-plane position="0 -0.49666 0" rotation="90 0 0" width="0.22156" height="0.222" material="src: src/leg_u.png" id="leg_right-bottom" geometry="width: 0.222"></a-plane>
+      </a-entity>
+
+    <!-- model -->
+    
+    <a-assets>
+        <a-assets-items id="steve" src="src/scene.gltf"></a-assets-items>
+    </a-assets>
+    <a-entity gltf-model="src/scene.gltf" position="-1.7407 0.937 -2.145" scale="0.057 0.059 0.062"></a-entity>
+
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
