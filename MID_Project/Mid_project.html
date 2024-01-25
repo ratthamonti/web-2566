@@ -1,15 +1,20 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 </head>
 
 <body>
     <a-scene>
 
-        <a-asset-items>
-            <a-asset-items id="earth" src="src/Earth_1_12756.glb"></a-asset-items>
-        </a-asset-items>
+        <!-- camera -->
+        <a-camera>
+            <a-entity cursor position="0 0 -1" geometry="primitive: sphere; radius: 0.005"
+                material="color:white; shader: flat; opacity: 0.5">
+            </a-entity>
+        </a-camera>
 
         <a-text value="MidTerm Project" position="0 -5 -2.2" animation="property: position; 
                         to: 0 2.7 -2.2; 
@@ -18,9 +23,23 @@
                         loop: false">
         </a-text>
 
-        <a-entity gltf-model="src/Earth_1_12756.glb" scale="0.001 0.001 0.001" position="-1.0365 1.523 -2.74558" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
-
-
+        <!-- earth -->
+        <a-entity>
+            <a-entity
+              gltf-model="src/Earth_1_12756.glb"
+              scale="0.001 0.001 0.001"
+              position="-1.0365 1.523 -2.74558"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+              event-set__mouseenter="_event: mouseenter; scale: 0.002 0.002 0.002;"
+              event-set__mouseleave="_event: mouseleave; scale: 0.001 0.001 0.001;"
+              event-set__click="_event: click; _target: #infoEarth; visible: true;">
+            </a-entity>
+            <a-plane id="infoEarth" position="-1.14608 1.57004 -2.20429" scale="1.35215 1.75185 1" visible="false"></a-plane>
+            <a-plane id="exitinfoEarth" material="color: #fa0000" position="-0.69011 2.266 -2.19639" scale="0.40059 0.29906 1"
+                event-set__click="_event: click; _target: #infoEarth; visible: false;">
+            </a-plane>
+          </a-entity>
+          
 
         <a-sky src="src/bg.jpg"></a-sky>
 
