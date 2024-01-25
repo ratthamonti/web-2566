@@ -1,29 +1,30 @@
 <html>
-    <head>
-        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-      </head>
-  <body>
+
+<head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
     <a-scene>
-    
-      <a-text   value="MidTerm Project"
-                position="0 -5 -2.2" 
-                animation="property: position; 
+
+        <a-asset-items>
+            <a-asset-items id="earth" src="src/Earth_1_12756.glb"></a-asset-items>
+        </a-asset-items>
+
+        <a-text value="MidTerm Project" position="0 -5 -2.2" animation="property: position; 
                         to: 0 2.7 -2.2; 
                         dur: 2000; 
                         easing: linear; 
-                        loop: false" >
+                        loop: false">
         </a-text>
- 
-        <a-box position="-0.26605 0.49838 -2.72877" rotation="0 45 0" src="src/bedrock.jpg" 
-        animation="property: position; to: -0.26605 0.51 -2.72877; dur: 500; easing: easeInOutSine; loop: true; dir: alternate">
-        </a-box>
 
-        <a-plane position="-1.55048 1.19302 -5.42746" rotation="0.9385048684242884 38.04382463889153 0.27043607930174857" width="4" height="4" 
-        src="src/ratthamonti.jpg" scale="0.35843 0.58801 1.10013"></a-plane>
+        <a-entity gltf-model="src/Earth_1_12756.glb" scale="0.001 0.001 0.001" position="-1.0365 1.523 -2.74558" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
 
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" src="src/grass_top.jpg"></a-plane>
-    <a-sky src="src/bg.png"></a-sky>
+
+
+        <a-sky src="src/bg.jpg"></a-sky>
 
     </a-scene>
-  </body>
+</body>
+
 </html>
