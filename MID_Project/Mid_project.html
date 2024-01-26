@@ -26,20 +26,24 @@
         <!-- earth -->
         <a-entity>
             <a-entity
-              gltf-model="src/Earth_1_12756.glb"
-              scale="0.001 0.001 0.001"
-              position="-1.0365 1.523 -2.74558"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-              event-set__mouseenter="_event: mouseenter; scale: 0.002 0.002 0.002;"
-              event-set__mouseleave="_event: mouseleave; scale: 0.001 0.001 0.001;"
-              event-set__click="_event: click; _target: #infoEarth; visible: true;">
-            </a-entity>
-            <a-plane id="infoEarth" position="-1.14608 1.57004 -2.20429" scale="1.35215 1.75185 1" visible="false"></a-plane>
-            <a-plane id="exitinfoEarth" material="color: #fa0000" position="-0.69011 2.266 -2.19639" scale="0.40059 0.29906 1"
-                event-set__click="_event: click; _target: #infoEarth; visible: false;">
-            </a-plane>
-          </a-entity>
-          
+  id="earthEntity"
+  gltf-model="src/Earth_1_12756.glb"
+  scale="0.001 0.001 0.001"
+  position="-1.0365 1.523 -2.74558"
+  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+  event-set__mouseenter="_event: mouseenter; scale: 0.002 0.002 0.002;"
+  event-set__mouseleave="_event: mouseleave; scale: 0.001 0.001 0.001;"
+  onclick="toggleVisibility();"
+>
+</a-entity>
+
+            <a-plane id="infoEarth" position="-1.14608 1.57004 -2.20429" scale="1.35215 1.75185 1"
+                visible="false"></a-plane>
+            
+            <a-text id="textEarth" value="Q NA HEE TEST TEST" position="-1.83499 1.95801 -2.20098" visible="false"
+                text="color: #050505">
+            </a-text>
+        </a-entity>
 
         <a-sky src="src/bg.jpg"></a-sky>
 
@@ -47,3 +51,17 @@
 </body>
 
 </html>
+
+<script>
+    function toggleVisibility() {
+      var infoEarth = document.getElementById('infoEarth');
+      var textEarth = document.getElementById('textEarth');
+    
+      var isInfoEarthVisible = infoEarth.getAttribute('visible');
+      var isTextEarthVisible = textEarth.getAttribute('visible');
+    
+      // Toggle visibility for infoEarth and textEarth
+      infoEarth.setAttribute('visible', !isInfoEarthVisible);
+      textEarth.setAttribute('visible', !isTextEarthVisible);
+    }
+    </script>
