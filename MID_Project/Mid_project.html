@@ -29,6 +29,7 @@
                 <img id="play" src="src/play.jpg">
                 <img id="pause" src="src/pause.jpg">
                 <video id="kobo" src="src/Tokopedia x Kobo kanaeru.mp4" loop="true"></video>
+                <audio id="minecraft" src="src/C418_Minecraft.mp3"></audio>
             </a-assets>
     
             <a-video src="#kobo" width="8" height="4.5" position="0 3 -9">
@@ -85,7 +86,8 @@
             </a-text>
         </a-entity>
 
-        <a-sky src="src/bg.jpg"></a-sky>
+        <a-sky src="src/bg.jpg"
+        sound="src: #minecraft; autoplay: true; loop: true; position: false"></a-sky>
 
     </a-scene>
 </body>
@@ -94,6 +96,7 @@
 
 <script>
 
+    // Earth Funtion
     function toggleEarth() {
         // กล่องข้อความ
         var infoEarth = document.getElementById('infoEarth');
@@ -123,6 +126,7 @@
 
     }
 
+    // Video Funtion
     AFRAME.registerComponent('play-pause', {
         init: function (){
             var myVideo = document.querySelector('#kobo');
