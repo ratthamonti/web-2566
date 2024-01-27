@@ -23,8 +23,52 @@
                         loop: false">
         </a-text>
 
+        <!-- video -->
+
+            <a-assets>
+                <img id="play" src="src/play.jpg">
+                <img id="pause" src="src/pause.jpg">
+                <video id="kobo" src="src/Tokopedia x Kobo kanaeru.mp4" loop="true"></video>
+            </a-assets>
+    
+            <a-video src="#kobo" width="8" height="4.5" position="0 3 -9">
+                <a-image id="videoControls" src="#play" position="0 -3 0" scale="0.5 0.5 1"
+                play-pause>
+                </a-image>
+    
+            </a-video>
+
+        
+        <!-- prop -->
+        <a-entity id="prop">
+            <!--<a-plane src="src/1.png" position="-0.00435 1.4131 -2.81745"></a-plane>-->
+
+            <a-entity id="light" light="intensity: 0.6; castShadow: true" position="1.96532 1.64748 -2.25357"
+                data-aframe-default-light="" aframe-injected=""
+                rotation="3.153559704400051 -29.62879350180513 4.837482664289541"></a-entity>
+
+        </a-entity>
+
+        <!-- light -->
+        <a-entity id="light">
+
+            <a-entity id="light" light="intensity: 0.6; castShadow: true" position="1.96532 1.64748 -2.25357"
+                data-aframe-default-light="" aframe-injected=""
+                rotation="3.153559704400051 -29.62879350180513 4.837482664289541"></a-entity>
+
+        </a-entity>
+
+
+        <!-- sun -->
+        <a-entity id="sun">
+            <a-entity id="sunEntity" gltf-model="src/sun.glb" scale="0.05 0.05 0.05" position="2.02495 1.523 -2.74558"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+            </a-entity>
+        </a-entity>
+
+
         <!-- earth -->
-        <a-entity>
+        <a-entity id="earth">
             <a-entity id="earthEntity" gltf-model="src/Earth_1_12756.glb" scale="0.001 0.001 0.001"
                 position="-1.0365 1.523 -2.74558" event-set__mouseenter="_event: mouseenter; scale: 0.002 0.002 0.002;"
                 animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
@@ -77,8 +121,22 @@
         }
         earthEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
 
-
     }
 
+    AFRAME.registerComponent('play-pause', {
+        init: function (){
+            var myVideo = document.querySelector('#kobo');
+            var videoControls = document.querySelector('#videoControls');
+            this.el.addEventListener('click', function () {
+                if (myVideo.paused) {
+                    myVideo.play();
+                    videoControls.setAttribute('src', '#pause');
+                } else {
+                    myVideo.pause();
+                    videoControls.setAttribute('src', '#play');
+                }
+            });
+        }
+    });
 
 </script>
