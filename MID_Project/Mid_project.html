@@ -28,8 +28,7 @@
             <a-entity id="earthEntity" gltf-model="src/Earth_1_12756.glb" scale="0.001 0.001 0.001"
                 position="-1.0365 1.523 -2.74558" event-set__mouseenter="_event: mouseenter; scale: 0.002 0.002 0.002;"
                 animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-                event-set__mouseleave="_event: mouseleave; scale: 0.001 0.001 0.001;"
-                onclick="toggleVisibility(),togglePosition();">
+                event-set__mouseleave="_event: mouseleave; scale: 0.001 0.001 0.001;" onclick="toggleEarth();">
             </a-entity>
 
             <a-entity id="earthEntitytemp" position="-1.0365 1.523 -2.74558"></a-entity>
@@ -50,34 +49,36 @@
 </html>
 
 <script>
-    function toggleVisibility() {
+
+    function toggleEarth() {
+        // กล่องข้อความ
         var infoEarth = document.getElementById('infoEarth');
         var textEarth = document.getElementById('textEarth');
 
         var isInfoEarthVisible = infoEarth.getAttribute('visible');
         var isTextEarthVisible = textEarth.getAttribute('visible');
 
-        // Toggle visibility for infoEarth and textEarth
         infoEarth.setAttribute('visible', !isInfoEarthVisible);
         textEarth.setAttribute('visible', !isTextEarthVisible);
-    }
 
-    function togglePosition() {
-    var earthEntity = document.getElementById('earthEntity');
-    var earthEntitytemp = document.getElementById('earthEntitytemp');
-    var earthPosition = earthEntity.getAttribute('position');
-    var tempPosition = earthEntitytemp.getAttribute('position');
+        // โลกขยับไปมา
+        var earthEntity = document.getElementById('earthEntity');
+        var earthEntitytemp = document.getElementById('earthEntitytemp');
+        var earthPosition = earthEntity.getAttribute('position');
+        var tempPosition = earthEntitytemp.getAttribute('position');
 
-    // ตรวจสอบว่าตำแหน่งปัจจุบันของ earthEntity เท่ากับตำแหน่งเริ่มต้นหรือไม่
-    if (earthPosition.equals(tempPosition)) {
-        // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่ และหมุนรอบตัวเอง
-        earthEntity.setAttribute('animation', 'property: position; to: 0.45341 1.523 -1.45939; loop: false; dur: 1000;');
-    } else {
-        // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น และหมุนรอบตัวเอง
-        earthEntity.setAttribute('animation', 'property: position; to: -1.0365 1.523 -2.74558; loop: false; dur: 1000;');
+        // ตรวจสอบว่าตำแหน่งปัจจุบันของ earthEntity เท่ากับตำแหน่งเริ่มต้นหรือไม่
+        if (earthPosition.equals(tempPosition)) {
+            // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
+            earthEntity.setAttribute('animation', 'property: position; to: 0.45341 1.523 -1.45939; loop: false; dur: 1000;');
+        } else {
+            // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
+            earthEntity.setAttribute('animation', 'property: position; to: -1.0365 1.523 -2.74558; loop: false; dur: 1000;');
+        }
+        earthEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
+
+
     }
-    earthEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
-}
 
 
 </script>
