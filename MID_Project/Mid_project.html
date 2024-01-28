@@ -44,48 +44,49 @@
         <a-mixin id="orbit"
             animation="property: rotation; loop: true; to: 0 360 0; dur: 40000; easing: linear;"></a-mixin>
 
-        <a-entity id="sunProp" gltf-model="src/sun.glb" scale="" position="0.12177 25.48138 0.43078" mixin="rotation"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-entity id="sunProp" gltf-model="src/sun.glb" scale="" position="0.122 63.36755 0.431" mixin="rotation"
+            animation="dur: 10000">
         </a-entity>
 
-        <a-entity id="mercuryProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="mercury" position="17.1649 25.90628 -1.54498" scale="0.005 0.005 0.005" radius=".4"
-                gltf-model="src/Mercury_1_4878.glb" mixin="orbit"></a-sphere>
+        <a-entity id="mercuryProp" mixin="orbit" animation="dur: 10000">
+            <a-sphere id="mercury" position="17.1649 62.27153 -1.54498" scale="0.005 0.005 0.005" radius=".4"
+                gltf-model="src/Mercury_1_4878.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="venusProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="venus" position="30.61269 25.55677 -4.93925" scale="0.01 0.01 0.01" radius=".4"
-                gltf-model="src/Venus_1_12103.glb" mixin="orbit"></a-sphere>
+        <a-entity id="venusProp" mixin="orbit" animation="dur: 20000">
+            <a-sphere id="venus" position="21.33375 63.35848 -29.59806" scale="0.01 0.01 0.01" radius=".4"
+                gltf-model="src/Venus_1_12103.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="earthProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="earth" position="49.03435 26.03691 -9.62643" scale="0.012 0.012 0.012" radius=".4"
-                gltf-model="src/Earth_1_12756.glb" mixin="orbit"></a-sphere>
+        <a-entity id="earthProp" mixin="orbit" animation="dur: 25000">
+            <a-sphere id="earth" position="-0.73926 63.41504 51.86289" scale="0.012 0.012 0.012" radius=".4"
+                gltf-model="src/Earth_1_12756.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="marsProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="mars" position="70.29101 24.89122 -16.98342" scale="0.01 0.01 0.01" radius=".4"
-                gltf-model="src/Mars_1_6792.glb" mixin="orbit"></a-sphere>
+        <a-entity id="marsProp" mixin="orbit" animation="dur: 28000">
+            <a-sphere id="mars" position="89.8594 55.06638 -15.06852" scale="0.01 0.01 0.01" radius=".4"
+                gltf-model="src/Mars_1_6792.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="jupiterProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="jupiter" position="99.63357 23.75109 -23.40012" scale="0.025 0.025 0.025" radius=".4"
-                gltf-model="src/Jupiter_1_142984.glb" mixin="orbit"></a-sphere>
+        <a-entity id="jupiterProp" mixin="orbit" animation="">
+            <a-sphere id="jupiter" position="63.16624 57.73343 -90.85257" scale="0.025 0.025 0.025" radius=".4"
+                gltf-model="src/Jupiter_1_142984.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="saturnProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="saturn" position="149.56146 23.31522 -29.71177" scale="0.02 0.02 0.02" radius=".4"
-                gltf-model="src/Saturn_1_120536.glb" mixin="orbit"></a-sphere>
+        <a-entity id="saturnProp" mixin="orbit" animation="dur: 50000">
+            <a-sphere id="saturn" position="-80.83985 23.31522 187.8054" scale="0.02 0.02 0.02" radius=".4"
+                gltf-model="src/Saturn_1_120536.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="uranusProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="uranus" position="189.51315 23.38961 -43.05519" scale="0.012 0.012 0.012" radius=".4"
-                gltf-model="src/Uranus_1_51118.glb" mixin="orbit"></a-sphere>
+        <a-entity id="uranusProp" mixin="orbit" animation="dur: 80000">
+            <a-sphere id="uranus" position="144.7681 23.38961 -88.15306" scale="0.012 0.012 0.012" radius=".4"
+                gltf-model="src/Uranus_1_51118.glb" mixin="orbit" animation="" material="" geometry=""></a-sphere>
         </a-entity>
 
-        <a-entity id="neptunrProp" mixin="orbit" animation="dur: 20000;">
-            <a-sphere id="neptune" position="216.14903 22.42486 -48.87999" scale="0.005 0.005 0.005" radius=".4"
-                gltf-model="src/Neptune_1_49528.glb" mixin="orbit"></a-sphere>
+        <a-entity id="neptunrProp" mixin="orbit" animation="dur: 90000">
+            <a-sphere id="neptune" position="62.18489 22.425 -226.40874" scale="0.005 0.005 0.005" radius=".4"
+                gltf-model="src/Neptune_1_49528.glb" mixin="orbit" animation="" material="" geometry=""
+                rotation="0 274.115 0"></a-sphere>
         </a-entity>
 
         <!-- light -->
@@ -97,7 +98,6 @@
 
         </a-entity>
 
-
         <!-- sun -->
         <a-entity id="sun">
             <a-entity id="sunEntity" gltf-model="src/sun.glb" scale="0.05 0.05 0.05" position="5.18367 1.523 -2.74558"
@@ -107,9 +107,10 @@
 
             <a-entity id="sunEntitytemp" position="5.18367 1.523 -2.74558"></a-entity>
 
-            <a-plane id="infoSun" position="-1.054 1.29736 -1.21785" scale="1.35215 1.75185 1" src="src/sunT.png"
+            <a-plane id="infoSun" position="-1.054 3.22538 -1.21785" scale="1.35215 1.75185 1" src="src/sunT.png"
                 visible="false">
             </a-plane>
+
 
         </a-entity>
 
@@ -276,7 +277,6 @@
         // กล่องข้อความ
         var infoSun = document.getElementById('infoSun');
         var isInfoSunVisible = infoSun.getAttribute('visible');
-        infoSun.setAttribute('visible', !isInfoSunVisible);
 
         // โลกขยับไปมา
         var sunEntity = document.getElementById('sunEntity');
@@ -288,9 +288,16 @@
         if (sunPosition.equals(tempSunPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             sunEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoSun.setAttribute('visible', !isInfoSunVisible);
+            infoSun.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             sunEntity.setAttribute('animation', 'property: position; to: 5.18367 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoSun.setAttribute('visible', !isInfoSunVisible);
+            }, 1000);
+            infoSun.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
+
         }
         sunEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -300,7 +307,6 @@
         // กล่องข้อความ
         var infoMercury = document.getElementById('infoMercury');
         var isInfoMercuryVisible = infoMercury.getAttribute('visible');
-        infoMercury.setAttribute('visible', !isInfoMercuryVisible);
 
         // โลกขยับไปมา
         var mercuryEntity = document.getElementById('mercuryEntity');
@@ -312,9 +318,15 @@
         if (mercuryPosition.equals(tempMercuryPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             mercuryEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoMercury.setAttribute('visible', !isInfoMercuryVisible);
+            infoMercury.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             mercuryEntity.setAttribute('animation', 'property: position; to: 4.07537 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoMercury.setAttribute('visible', !isInfoMercuryVisible);
+            }, 1000);
+            infoMercury.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         mercuryEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -324,7 +336,6 @@
         // กล่องข้อความ
         var infoVenus = document.getElementById('infoVenus');
         var isInfoVenusVisible = infoVenus.getAttribute('visible');
-        infoVenus.setAttribute('visible', !isInfoVenusVisible);
 
         // โลกขยับไปมา
         var venusEntity = document.getElementById('venusEntity');
@@ -336,9 +347,16 @@
         if (venusPosition.equals(tempVenusPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             venusEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoVenus.setAttribute('visible', !isInfoVenusVisible);
+            infoVenus.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
+
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             venusEntity.setAttribute('animation', 'property: position; to: 2.98715 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoVenus.setAttribute('visible', !isInfoVenusVisible);
+            }, 1000);
+            infoVenus.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         venusEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -348,7 +366,6 @@
         // กล่องข้อความ
         var infoEarth = document.getElementById('infoEarth');
         var isInfoEarthVisible = infoEarth.getAttribute('visible');
-        infoEarth.setAttribute('visible', !isInfoEarthVisible);
 
         // โลกขยับไปมา
         var earthEntity = document.getElementById('earthEntity');
@@ -360,9 +377,16 @@
         if (earthPosition.equals(tempEarthPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             earthEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoEarth.setAttribute('visible', !isInfoEarthVisible);
+            infoEarth.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
+
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             earthEntity.setAttribute('animation', 'property: position; to: 1.90475 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoEarth.setAttribute('visible', !isInfoEarthVisible);
+            }, 1000);
+            infoEarth.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         earthEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -372,7 +396,6 @@
         // กล่องข้อความ
         var infoMars = document.getElementById('infoMars');
         var isInfoMarsVisible = infoMars.getAttribute('visible');
-        infoMars.setAttribute('visible', !isInfoMarsVisible);
 
         // โลกขยับไปมา
         var marsEntity = document.getElementById('marsEntity');
@@ -384,9 +407,15 @@
         if (marsPosition.equals(tempMarsPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             marsEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoMars.setAttribute('visible', !isInfoMarsVisible);
+            infoMars.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             marsEntity.setAttribute('animation', 'property: position; to: 0.76012 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoMars.setAttribute('visible', !isInfoMarsVisible);
+            }, 1000);
+            infoMars.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         marsEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -396,7 +425,6 @@
         // กล่องข้อความ
         var infoJupiter = document.getElementById('infoJupiter');
         var isInfoJupiterVisible = infoJupiter.getAttribute('visible');
-        infoJupiter.setAttribute('visible', !isInfoJupiterVisible);
 
         // โลกขยับไปมา
         var jupiterEntity = document.getElementById('jupiterEntity');
@@ -408,9 +436,15 @@
         if (jupiterPosition.equals(tempJupiterPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             jupiterEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoJupiter.setAttribute('visible', !isInfoJupiterVisible);
+            infoJupiter.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             jupiterEntity.setAttribute('animation', 'property: position; to: -0.42603 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoJupiter.setAttribute('visible', !isInfoJupiterVisible);
+            }, 1000);
+            infoJupiter.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         jupiterEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -420,7 +454,6 @@
         // กล่องข้อความ
         var infoSaturn = document.getElementById('infoSaturn');
         var isInfoSaturnVisible = infoSaturn.getAttribute('visible');
-        infoSaturn.setAttribute('visible', !isInfoSaturnVisible);
 
         // โลกขยับไปมา
         var saturnEntity = document.getElementById('saturnEntity');
@@ -432,9 +465,15 @@
         if (saturnPosition.equals(tempSaturnPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             saturnEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoSaturn.setAttribute('visible', !isInfoSaturnVisible);
+            infoSaturn.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             saturnEntity.setAttribute('animation', 'property: position; to: -2.13338 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoSaturn.setAttribute('visible', !isInfoSaturnVisible);
+            }, 1000);
+            infoSaturn.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         saturnEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -444,7 +483,6 @@
         // กล่องข้อความ
         var infoUranus = document.getElementById('infoUranus');
         var isInfoUranusVisible = infoUranus.getAttribute('visible');
-        infoUranus.setAttribute('visible', !isInfoUranusVisible);
 
         // โลกขยับไปมา
         var uranusEntity = document.getElementById('uranusEntity');
@@ -456,9 +494,15 @@
         if (uranusPosition.equals(tempUranusPosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             uranusEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoUranus.setAttribute('visible', !isInfoUranusVisible);
+            infoUranus.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             uranusEntity.setAttribute('animation', 'property: position; to: -3.93523 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoUranus.setAttribute('visible', !isInfoUranusVisible);
+            }, 1000);
+            infoUranus.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         uranusEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
@@ -468,7 +512,6 @@
         // กล่องข้อความ
         var infoNeptune = document.getElementById('infoNeptune');
         var isInfoNeptuneVisible = infoNeptune.getAttribute('visible');
-        infoNeptune.setAttribute('visible', !isInfoNeptuneVisible);
 
         // โลกขยับไปมา
         var neptuneEntity = document.getElementById('neptuneEntity');
@@ -480,9 +523,15 @@
         if (neptunePosition.equals(tempNeptunePosition)) {
             // ถ้าเท่ากันให้เปลี่ยนตำแหน่งไปที่ตำแหน่งใหม่
             neptuneEntity.setAttribute('animation', 'property: position; to: 0.64017 1.32363 -0.94835; loop: false; dur: 1000;');
+            infoNeptune.setAttribute('visible', !isInfoNeptuneVisible);
+            infoNeptune.setAttribute('animation', 'property: position; to: -1.054 1.29736 -1.21785; loop: false; dur: 1000;');
         } else {
             // ถ้าไม่เท่ากันให้เปลี่ยนตำแหน่งกลับไปที่ตำแหน่งเริ่มต้น
             neptuneEntity.setAttribute('animation', 'property: position; to: -5.08677 1.523 -2.74558; loop: false; dur: 1000;');
+            setTimeout(function () {
+                infoNeptune.setAttribute('visible', !isInfoNeptuneVisible);
+            }, 1000);
+            infoNeptune.setAttribute('animation', 'property: position; to: -1.054 3.22538 -1.21785; loop: false; dur: 1000;');
         }
         neptuneEntity.setAttribute('animation__rotation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000');
     }
