@@ -5,6 +5,7 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,7 @@
             <img id="pause" src="src/pause.png">
             <video id="solarr" src="src/solarr.mp4" loop="true"></video>
             <audio id="minecraft" src="src/C418_Minecraft.mp3"></audio>
+            <audio id="lethal" src="src/Lethal Company.mp3"></audio>
         </a-assets>
 
         <!-- video -->
@@ -38,12 +40,22 @@
         </a-video>
 
         <a-entity id="prop">
+            
+            <a-entity gltf-model="src/astronaut/scene.gltf" animation-mixer="clip: Animation" position="13.18833 0 -0.56988" rotation="0 -64.84220663275039 0"></a-entity>
+            <a-entity gltf-model="src/employee/scene.gltf" animation-mixer="clip: Groovy" position="13.34831 0 7.00764" rotation="0 -107.48459053536192 0" scale="1.4 1.4 1.4"></a-entity>
+            <a-entity gltf-model="src/employee_dance/scene.gltf" animation-mixer="clip: mixamo.com" position="12.08383 0 8.94599" rotation="0 -150.1504657075738 0" scale="0.9 0.9 0.9"></a-entity>
+            <a-entity gltf-model="src/employee/scene.gltf" animation-mixer="clip: Groovy" position="9.45501 0 7.47813" rotation="0 105.27240048836181 0" scale="1.4 1.4 1.4"></a-entity>
+            <a-entity sound="src: src/Lethal Company.mp3; 
+                            autoplay: true;
+                            volume: 0.1;
+                            refDistance: 4;
+                            rolloffFactor: 4;
+                            loop: true;" 
+                            position="11.54325 0 7.00253">
+            </a-entity>
 
             <a-plane id="member" src="src/member.png" material="" geometry="" position="15.00336 2.50748 2.54752" scale="5 5 5" rotation="0 -90 0">
             </a-plane>
-
-            <a-entity id="among_us_airship" gltf-model="src/among_us_airship.glb" position="-16.60863 5.86451 24.60795" rotation="0 146.01199155334385 0" scale="3 3 3">
-            </a-entity>
 
 <a-entity id="among_hololiveen" gltf-model="src/among_hololiveen.glb" position="16.16341 5.14298 1.69454" rotation="0 -90 0" scale="0.5 0.5 0.5">
             </a-entity>
@@ -51,9 +63,6 @@
             <a-entity id="among_us" gltf-model="src/among_us.glb" position="-14.20661 0 -1.43059"
                 rotation="0 48.00641478062629 0" scale="0.5 0.5 0.5">
             </a-entity>
-
-            <a-plane id="NatDog" src="src/NatDog.jpg" material="" geometry="" position="14.90736 3.19713 4.33891" scale="" rotation="0 -90 0">
-            </a-plane>
 
             <a-mixin id="rotation"
                 animation="property: rotation; loop: true; from: 0 0 0; to: 0 360 0; dur: 20000; easing: linear;"></a-mixin>
