@@ -1,0 +1,11 @@
+Model Information:
+* title:	toothless dance [samba dancing mixamo]
+* source:	https://sketchfab.com/3d-models/toothless-dance-samba-dancing-mixamo-edbac9223eb14dee9da58f0f2fac1385
+* author:	mdisa75 (https://sketchfab.com/juTYou727dtf)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "toothless dance [samba dancing mixamo]" (https://sketchfab.com/3d-models/toothless-dance-samba-dancing-mixamo-edbac9223eb14dee9da58f0f2fac1385) by mdisa75 (https://sketchfab.com/juTYou727dtf) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
