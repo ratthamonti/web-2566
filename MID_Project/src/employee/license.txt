@@ -1,0 +1,11 @@
+Model Information:
+* title:	Employee
+* source:	https://sketchfab.com/3d-models/employee-9d1098bc72a74bb1b6371aef4b987100
+* author:	dotflare (https://sketchfab.com/Dotflare)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Employee" (https://sketchfab.com/3d-models/employee-9d1098bc72a74bb1b6371aef4b987100) by dotflare (https://sketchfab.com/Dotflare) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
