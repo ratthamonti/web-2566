@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work 5</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        .left-panel, .right-panel {
+            width: 45%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .left-panel {
+            order: 1; /* สลับตำแหน่งรูปและวิดีโอ */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Work 5: React Native App</h1>
+    </header>
+
+    <section>
+        <div class="right-panel">
+            <h2>ภาพตัวอย่างหน้าจอ : </h2>
+            <img src="web_pic_work5.jpg" alt="capture">
+        </div>
+
+        <div class="left-panel">
+            <h2>VDO ตัวอย่าง : </h2>
+            <video controls muted>
+                <source src="web_work5.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <h2>Source Code : </h2>
+    <div data-snack-id="@ratthamonti/work5_643021336-0" data-snack-platform="web" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fbfcfd;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+    <script async src="https://snack.expo.dev/embed.js"></script>
+
+</body> 
+</html>
